@@ -83,6 +83,10 @@ jinja2==3.1.2
     #   nbclassic
     #   nbconvert
     #   notebook
+joblib==1.1.0
+    # via
+    #   mlxtend
+    #   scikit-learn
 json5==0.9.10
     # via jupyterlab-server
 jsonschema==4.14.0
@@ -128,6 +132,7 @@ markupsafe==2.1.1
 matplotlib==3.5.3
     # via
     #   -r requirements.in
+    #   mlxtend
     #   seaborn
 matplotlib-inline==0.1.6
     # via
@@ -135,6 +140,8 @@ matplotlib-inline==0.1.6
     #   ipython
 mistune==2.0.4
     # via nbconvert
+mlxtend==0.20.0
+    # via -r requirements.in
 nbclassic==0.4.3
     # via jupyterlab
 nbclient==0.6.7
@@ -166,9 +173,12 @@ numpy==1.23.2
     # via
     #   -r requirements.in
     #   matplotlib
+    #   mlxtend
     #   pandas
+    #   scikit-learn
     #   scipy
     #   seaborn
+    #   xgboost
 packaging==21.3
     # via
     #   ipykernel
@@ -180,6 +190,7 @@ packaging==21.3
 pandas==1.4.3
     # via
     #   -r requirements.in
+    #   mlxtend
     #   seaborn
 pandocfilters==1.5.0
     # via nbconvert
@@ -238,8 +249,16 @@ pyzmq==23.2.1
     #   notebook
 requests==2.28.1
     # via jupyterlab-server
+scikit-learn==1.1.2
+    # via
+    #   mlxtend
+    #   sklearn
 scipy==1.9.1
-    # via seaborn
+    # via
+    #   mlxtend
+    #   scikit-learn
+    #   seaborn
+    #   xgboost
 seaborn==0.11.2
     # via -r requirements.in
 send2trash==1.8.0
@@ -252,6 +271,8 @@ six==1.16.0
     #   asttokens
     #   bleach
     #   python-dateutil
+sklearn==0.0
+    # via -r requirements.in
 sniffio==1.2.0
     # via anyio
 soupsieve==2.3.2.post1
@@ -263,6 +284,8 @@ terminado==0.15.0
     #   jupyter-server
     #   nbclassic
     #   notebook
+threadpoolctl==3.1.0
+    # via scikit-learn
 tinycss2==1.1.1
     # via nbconvert
 tornado==6.2
@@ -297,6 +320,8 @@ webencodings==0.5.1
     #   tinycss2
 websocket-client==1.4.0
     # via jupyter-server
+xgboost==1.6.2
+    # via -r requirements.in
 zipp==3.8.1
     # via
     #   importlib-metadata

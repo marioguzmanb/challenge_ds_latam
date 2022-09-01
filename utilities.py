@@ -1,6 +1,10 @@
 from datetime import datetime
-import pandas as pd
 import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+from sklearn.metrics import confusion_matrix, classification_report
+from mlxtend.plotting import plot_confusion_matrix
+
 
 def diff_minutes(start,end,input_format:str="%Y-%m-%d %H:%M:%S"):
     """
@@ -110,3 +114,42 @@ def periodo_dia(input_date,input_format="%Y-%m-%d %H:%M:%S"):
         return "tarde"
     else:
         return "noche"
+
+def modeling(X_train, y_train, X_test, y_test, clf):
+    """
+    Entrenamiento del modelo
+    Entrada:
+        - X_train: matriz de features (X) del conjunto de entrenamiento
+        - y_train: valor verdadero del conjunto de entrenamiento
+        - X_test: matriz de features (X) del conjunto de prueba
+        - y_test: valor verdadero del conjunto de prueba
+        - clf: Clasificador inicializado
+    Salida:
+        - tupla: modelo, predicciones
+    """
+    # Fit
+    print(clf)
+    clf.fit(X_train, y_train)
+    print("train score:", clf.score(X_train, y_train))
+    print("test score:", clf.score(X_test, y_test))
+    y_pred = clf.predict(X_test)
+    return clf, y_pred
+
+def get_report(y_test, y_pred):
+    """
+    Retorna el informe de clasificación como dataframe y grafica la matriz de confusión
+    Entrada
+        - y_test: array = Valor verdadero
+        - y_pred: array = Predicciones
+    Salida:
+        - Reporte  en formato pd.DataFrame
+    """
+    metrics_res = pd.DataFrame(classification_report(y_test, y_pred, digits=5, output_dict=True)).transpose()
+
+    fig, axes = plot_confusion_matrix(confusion_matrix(y_test, y_pred),
+                                      show_absolute=True,
+                                      show_normed=True,
+                                      colorbar=True, class_names=np.unique([y_test, y_pred]))
+    plt.show()
+
+    return metrics_res
