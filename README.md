@@ -1,7 +1,7 @@
 # Data Scientist Challenge - LATAM Airlines 
 
-Autor: Mario Guzmán Briones
-email: mario.guzman@globant.com
+- Autor: Mario Guzmán Briones 
+- email: mario.guzman@globant.com
 
 ### Desarrollo del desafío para postular a un cargo de Data Scientist en LATAM Airlines
 
