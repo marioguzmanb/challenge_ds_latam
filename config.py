@@ -13,6 +13,6 @@ param_gb = {'loss': ['deviance','exponential'],
               'subsample': [0.6,0.7,0.8,1],
               'max_depth': list(range(3,8,1))}
 
-param_xgb = {'model__max_depth': [5,10,15],
-              'model__learning_rate': [0.001,0.003],
-              'model__n_estimators': [10,50,100]}
+param_xgb = {'max_depth': [5,10,15],
+              'learning_rate': [0.001,0.003],
+              'n_estimators': [10,50,100]}
