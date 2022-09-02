@@ -8,17 +8,28 @@ email: mario.guzman@globant.com
 # Estructuración del repositorio
 challenge_ds_latam
 │   README.md
-│   setup.sh
-│   requirements.in
+│   setup.sh          # Configuraciones del ambiente
+│   requirements.in   # Requerimientos
 │   requirements.txt
-│   config.py
-│   utilities.py
-│   .gitignore    
-└──/data
-└──/metrics 
-└──/models
-└──/notebooks
-└──/venv
+│   config.py         # Configuraciones necesarias para la notebook
+│   utilities.py      # Funciones requeridas para la notebook
+│   .gitignore        
+└──/data              # Almacenamiento de las métricas, y dataset
+    └──/metrics_models# Dataset con las métricas de los modelos  
+└──/models            # Modelos entrenados
+    └──/atraso_completo
+    └──/atraso_lunes
+    └──/atraso_martes
+    └──/atraso_miercoles
+    └──/atraso_jueves
+    └──/atraso_viernes
+    └──/atraso_sabado
+    └──/atraso_domingo
+    └──/atraso_manana
+    └──/atraso_tarde
+    └──/atraso_noche
+└──/notebooks         # Notebook desarrollada
+└──/venv              # virtual environmet
 
 # Environment:
     - Python 3.8.2
@@ -42,6 +53,12 @@ source venv/bin/activate
 
 ```
 sh setup.sh
+```
+
+### Trabajar desde jupyter lab
+
+```
+jupyter lab
 ```
 
 ### Correr la notebook **solution.ipynb** que contiene el EDA, la construcción del modelo y las conclusiones.
