@@ -10,15 +10,15 @@
 ```
 challenge_ds_latam
 │   README.md
-│   setup.sh          # Configuraciones del ambiente
-│   requirements.in   # Requerimientos
+│   setup.sh              # Configuraciones del ambiente
+│   requirements.in       # Requerimientos
 │   requirements.txt
-│   config.py         # Configuraciones necesarias para la notebook
-│   utilities.py      # Funciones requeridas para la notebook
+│   config.py             # Configuraciones necesarias para la notebook
+│   utilities.py          # Funciones requeridas para la notebook
 │   .gitignore        
-└──/data              # Almacenamiento de las métricas, y dataset
-    └──/metrics_models# Dataset con las métricas de los modelos  
-└──/models            # Modelos entrenados
+└──/data                  # Almacenamiento de las métricas, y dataset
+    └──/metrics_models    # Dataset con las métricas de los modelos  
+└──/models                # Modelos entrenados
     └──/atraso_completo
     └──/atraso_lunes
     └──/atraso_martes
@@ -30,8 +30,9 @@ challenge_ds_latam
     └──/atraso_manana
     └──/atraso_tarde
     └──/atraso_noche
-└──/notebooks         # Notebook desarrollada
-└──/venv              # virtual environmet
+└──/notebooks             # Notebook desarrollada
+    └──/solution.ipynb        
+└──/venv                  # virtual environmet
 ```
 
 # Environment:

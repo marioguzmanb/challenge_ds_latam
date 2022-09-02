@@ -59,7 +59,7 @@ def temporada_alta(input_date,input_format="%Y-%m-%d %H:%M:%S"):
         - input_date: str = Campo de fecha
         - input_format:str = Formato de la fecha de entrada
     Salidas:
-        - {0,1} en tipo int
+        - {0.0,1.0} en tipo float
     """
     date_fmt = datetime.strptime(input_date,input_format).strftime("%Y-%m-%d")
     year = datetime.strptime(input_date,input_format).strftime("%Y")
@@ -70,9 +70,9 @@ def temporada_alta(input_date,input_format="%Y-%m-%d %H:%M:%S"):
     elif date_fmt>=f"{year}-07-15" and date_fmt <=f"{year}-07-31":
         return 1
     elif date_fmt>=f"{year}-09-11" and date_fmt <=f"{year}-09-30":
-        return 1
+        return 1.0
     else:
-        return 0
+        return 0.0
 
 def date2date(input_date,input_format="%Y-%m-%d %H:%M:%S"):
     """
