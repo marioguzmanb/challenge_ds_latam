@@ -6,6 +6,8 @@ email: mario.guzman@globant.com
 ### Desarrollo del desafío para postular a un cargo de Data Scientist en LATAM Airlines
 
 # Estructuración del repositorio
+
+```
 challenge_ds_latam
 │   README.md
 │   setup.sh          # Configuraciones del ambiente
@@ -30,6 +32,7 @@ challenge_ds_latam
     └──/atraso_noche
 └──/notebooks         # Notebook desarrollada
 └──/venv              # virtual environmet
+```
 
 # Environment:
     - Python 3.8.2
